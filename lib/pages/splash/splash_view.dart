@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_demo/routes/app_pages.dart';
 
 import '../login/login_view.dart';
 
@@ -12,12 +13,15 @@ class SplashView extends StatelessWidget {
         body: Center(
           child: ElevatedButton(
             onPressed: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const LoginView(),
-                  ));
+              // Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //       builder: (context) => const LoginView(),
+              //     ));
+
               // Get.to(const LoginView());
+
+              Get.toNamed(Routes.LOGIN);
             },
             child: const Text('Go to Login'),
           ),
