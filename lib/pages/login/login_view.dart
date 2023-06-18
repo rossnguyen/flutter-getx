@@ -27,6 +27,20 @@ class LoginView extends StatelessWidget {
                 },
                 child: const Text('Go To Home'),
               ),
+              const SizedBox(height: 8,),
+              ElevatedButton(
+                onPressed: () {
+                  Get.offNamed(Routes.HOME);
+                },
+                child: const Text('Off and go to Home'),
+              ),
+              const SizedBox(height: 8,),
+              ElevatedButton(
+                onPressed: () {
+                  Get.offAllNamed(Routes.HOME);
+                },
+                child: const Text('Off all and go to Home'),
+              )
             ],
           ),
         ));
