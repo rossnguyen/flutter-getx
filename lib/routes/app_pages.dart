@@ -1,4 +1,6 @@
 import 'package:get/get.dart';
+import 'package:getx_demo/pages/home/home_binding.dart';
+import 'package:getx_demo/pages/login/login_binding.dart';
 import 'package:getx_demo/pages/login/login_view.dart';
 import 'package:getx_demo/pages/home/home_view.dart';
 import 'package:getx_demo/pages/splash/splash_view.dart';
@@ -19,12 +21,12 @@ class AppPages {
     GetPage(
       name: _Paths.LOGIN,
       page: () =>  const LoginView(),
-      // binding: LookupBinding(),
+      binding: LoginBinding(),
     ),
     GetPage(
       name: _Paths.HOME,
       page: () => const HomeView(),
-      // binding: SplashBinding(),
+      binding: HomeBinding(),
     ),
   ];
 }
