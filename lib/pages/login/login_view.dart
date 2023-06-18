@@ -15,8 +15,8 @@ class LoginView extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pop(context);
-                  // Get.back();
+                  // Navigator.pop(context);
+                  Get.back();
                 },
                 child: const Text('Back to Splash'),
               ),
