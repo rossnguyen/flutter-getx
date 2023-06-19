@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:getx_demo/routes/routes_id.dart';
 
 import '../../../routes/app_pages.dart';
 
@@ -12,14 +13,7 @@ class ConfiguratorView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text('Change configurator view'),
-          SizedBox(height: 8,),
-          ElevatedButton(onPressed: (){Get.toNamed(Routes.SETTING);}, child: Text('Go to setting'))
-        ],
-      ),
+      child: Text('Change configurator view'),
     );
   }
 }

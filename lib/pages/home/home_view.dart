@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:getx_demo/pages/home/tab/my_profile.dart';
+import 'package:getx_demo/pages/home/tab/navigator_my_profile.dart';
 import 'package:getx_demo/pages/home/tab/quotation_view.dart';
-import 'package:getx_demo/pages/splash/splash_view.dart';
 
 import 'tab/configurator_view.dart';
 
@@ -20,7 +18,7 @@ class _HomeViewState extends State<HomeView> {
   static const List<Widget> _widgetOptions = <Widget>[
     ConfiguratorView(),
     QuotationView(),
-    MyProfileView(),
+    NavigatorMyProfile(),
   ];
 
   void _onItemTapped(int index) {
@@ -32,9 +30,6 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home view'),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

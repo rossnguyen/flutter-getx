@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_demo/pages/splash/splash_view.dart';
 import 'package:getx_demo/routes/app_pages.dart';
+import 'package:getx_demo/routes/routes_id.dart';
 
 void main() {
   runApp(const MyApp());
