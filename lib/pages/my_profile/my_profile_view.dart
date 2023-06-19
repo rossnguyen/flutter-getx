@@ -20,7 +20,7 @@ class MyProfileView extends StatelessWidget {
             Get.toNamed(MyProfileRoutes.SETTING,
                 id: RoutesId.profileNavigatorId,
                 arguments: {
-                  'id': RoutesId.profileNavigatorId
+                  'hello': 'My name is Ross'
                 }); // navigate by your nested route by index
           },
           child: Text("Go to Setting"),

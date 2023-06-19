@@ -26,13 +26,14 @@ class NavigatorMyProfile extends StatelessWidget {
               case MyProfileRoutes.MY_PROFILE:
                 return MyProfileView();
               case MyProfileRoutes.SETTING:
-                return SettingView();
+                return SettingView(argument: settings.arguments,);
               case MyProfileRoutes.UPDATE_AVATAR:
                 return UpdateAvatarView();
               default:
                 return MyProfileView();
             }
-          },
+          }
+          ,
         );
       },
     );

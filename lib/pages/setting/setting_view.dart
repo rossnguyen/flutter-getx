@@ -9,10 +9,11 @@ import '../../routes/app_pages.dart';
 import '../../routes/my_profile_routes.dart';
 
 class SettingView extends StatelessWidget {
-  const SettingView({Key? key}) : super(key: key);
-
+  const SettingView({Key? key, required this.argument}) : super(key: key);
+  final dynamic argument;
   @override
   Widget build(BuildContext context) {
+    print(argument);
     return Scaffold(
         appBar: AppBar(title: const Text('Setting View')),
         body: Center(
