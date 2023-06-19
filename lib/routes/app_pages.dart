@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:getx_demo/pages/home/setting_view.dart';
 import 'package:getx_demo/pages/login/login_view.dart';
 import 'package:getx_demo/pages/home/home_view.dart';
 import 'package:getx_demo/pages/splash/splash_view.dart';
@@ -24,6 +25,12 @@ class AppPages {
     GetPage(
       name: _Paths.HOME,
       page: () => const HomeView(),
+      // binding: SplashBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.SETTING,
+      page: () => const SettingView(),
       // binding: SplashBinding(),
     ),
   ];
