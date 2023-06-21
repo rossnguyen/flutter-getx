@@ -13,10 +13,21 @@ class LoginView extends GetView<LoginController> {
         title: const Text('LoginView'),
         centerTitle: true,
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: controller.goHome,
-          child: Text('Go to Home Page'),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextFormField(controller: controller.userNameController, decoration: InputDecoration(hintText: 'Enter your user namme'),),
+              SizedBox(height: 8,),
+              TextFormField(controller: controller.passwordController, decoration: InputDecoration(hintText: 'Enter your password'),),
+              ElevatedButton(
+                onPressed: controller.goHome,
+                child: Text('Go to Home Page'),
+              ),
+            ],
+          ),
         ),
       ),
     );

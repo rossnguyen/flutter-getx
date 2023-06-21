@@ -1,23 +1,16 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:getx_demo/pages/home/controllers/user_controller.dart';
+import 'package:getx_demo/pages/login/controllers/login_controller.dart';
+import 'package:getx_demo/routes/app_pages.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../controllers/home_controller.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Get.put(HomeController());
-    // Get.put(UserController());
-    // Get.lazyPut(() => UserController());
-    // Get.putAsync<SharedPreferences>(() async {
-    //   final prefs = await SharedPreferences.getInstance();
-    //   await prefs.setInt('counter', 12345);
-    //   return prefs;
-    // });
     return Scaffold(
       appBar: AppBar(
         title: const Text('GetX Home'),
@@ -25,26 +18,13 @@ class HomeView extends StatelessWidget {
       ),
       body: Center(
         child: Column(mainAxisSize: MainAxisSize.min, children: [
-          Obx(() => Text(Get.find<HomeController>().count.toString())),
-          const SizedBox(height: 8),
-          ElevatedButton(
-              onPressed: Get.find<HomeController>().increment,
-              child: const Text('Increase')),
-          //  const SizedBox(height: 8),
-          //  ElevatedButton(
-          //     onPressed: (){
-          //        Get.find<UserController>().updateName('Phuc đẹp trai');
-          //        print(Get.find<UserController>().name);
-          //     },
-          //     child: const Text('Update Name')),
-          //   const SizedBox(height: 8),
-          //   Obx(() => Text(Get.find<SharedPreferences>().getInt('counter').toString())),
-          //    ElevatedButton(
-          //     onPressed: (){
-          //       print(
-          //           'Counter value from share preferences: ${Get.find<SharedPreferences>().getInt('counter')}');
-          //     },
-          //     child: const Text('Get data from share preferences')),
+          Text('Username: ${controller.userName}'),
+          SizedBox(
+            height: 8,
+          ),
+          Text('Password: ${controller.password}'),
+          SizedBox(height: 8,),
+          ElevatedButton(onPressed: controller.goToProfile, child: Text('Go To Profile'))
         ]),
       ),
     );
