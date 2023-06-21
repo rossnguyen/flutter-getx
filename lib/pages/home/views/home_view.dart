@@ -24,7 +24,7 @@ class HomeView extends GetView<HomeController> {
           ),
           Text('Password: ${controller.password}'),
           SizedBox(height: 8,),
-          ElevatedButton(onPressed: controller.goToProfile, child: Text('Go To Profile'))
+          ElevatedButton(onPressed: controller.goToProfile, child: Text('Go To Profile')),
         ]),
       ),
     );

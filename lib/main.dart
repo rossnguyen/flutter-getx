@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_demo/routes/app_pages.dart';
+import 'package:getx_demo/service/connectivity_service.dart';
 
 
 
@@ -17,6 +18,9 @@ class GetXApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'GetX state management demo',
+      initialBinding: BindingsBuilder(() {
+        Get.put(ConnectivityService());
+      }),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
